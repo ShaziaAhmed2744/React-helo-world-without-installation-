@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>React App</title>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="mydiv">
+    </div>
+    <script type="text/babel">
+    function Test()
+    {
+        const bla=()=>{alert("Hello world")}
+        return <button onClick={bla}>Click Me</button>
+    }
+    class Hello extends React.Component{
+        render()
+        {
+          return <div>Hello React code <Test /></div>  
+        }
+    }
+    ReactDOM.render(<Hello />,document.getElementById('mydiv'))
+    </script>
+</body>
+
+</html>
